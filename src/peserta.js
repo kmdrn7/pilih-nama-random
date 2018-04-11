@@ -16,9 +16,14 @@ var peserta = [{
 },
 {
     no : '005',
-    name : 'Fandi'
+    name : 'Boben'
 },
 {
     no : '006',
     name : 'Varen'
-}];
+},
+{
+    no : '007',
+    name : 'Dany'
+}
+];

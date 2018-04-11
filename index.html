@@ -37,7 +37,7 @@
             <div class="col-md-10 col-sm-offset-1 text-center">
                 <h1 class="h1-header-pens">Doorprize Dies Natalis PENS ke-30</h1>
                 <div class="display-nama-wrapper">                    
-                    <input type="text" name="pemenang" id="input-pemenang" class="form-control" value="Andika Ahmad Ramadhan" readonly>
+                    <input type="text" name="pemenang" id="input-pemenang" class="form-control" value="-" readonly>
                 </div>
                 <div class="tombol-wrapper">                    
                     <button type="button" data-status-tombol="start" class="btn btn-warning btn-lg btn-acak" id="btn-acak">Acak</button>
@@ -55,8 +55,7 @@
     <script src="src/peserta.js"></script>
     <script>
         var btn = document.getElementById("btn-acak");
-        var input = document.getElementById("input-pemenang");
-        var status = 0;
+        var input = document.getElementById("input-pemenang");        
 
         /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
         particlesJS.load('particles-js', 'src/config.json', function() {
@@ -69,38 +68,51 @@
         }
 
         var i = 0;
+        var len = 0;
         var rand = 0;
-        var len = app.peserta.length;
+        var status = 0;
 
         function lup(){
             setTimeout(function(){
+                len = app.peserta.length;
+                rand = Math.floor(Math.random() * ((len-1) - 0 + 1)) + 0;
+
                 if( status != 1 ){
-                    rand = Math.floor(Math.random() * len-1) + 1;
-                    input.value = app.peserta.sort(function(){
-                        return .8 - Math.random();
-                    })[rand].name;
-                    i++;
-                    if( i == len ){
-                        i = 0;
-                    }
-                    lup();
-                }
-            }, 50);
+                    if( app.peserta.length > 0 ){
+                        input.value = app.peserta[rand].name;
+                        i++;
+                        if( i == len ){
+                            i = 0;
+                        }
+                        lup();
+                    } else {
+                        input.value = "Peserta tidak ada";
+                    }                    
+                } else {
+                    var nama = app.peserta[rand].name;
+                    app.peserta.splice(rand, 1);
+                    input.value = nama;
+                    console.log(rand+' '+nama+ " dihapus dari peserta karena sudah pernah mendapat hadian");
+                }                
+
+            }, 100);
         }
 
         btn.addEventListener('click', function (evt) {
+
             var stt = this.getAttribute('data-status-tombol');
             if( stt == 'start' ){
-                lup();
                 this.setAttribute('data-status-tombol', 'stop');
+                lup();
             } else {                
                 status = 1;
                 i = 0;
                 rand = 0;                
                 this.setAttribute('data-status-tombol', 'start');
+                
                 setTimeout(function(){
-                    status = 0;
-                }, 100);
+                    status = 0;                    
+                }, 120);
             }
         });
 
@@ -110,6 +122,8 @@
                 $('#btn-acak').click();
             }
         });
+
+        $(document).focus();
 
     </script>
 </body>
