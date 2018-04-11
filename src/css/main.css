@@ -1,0 +1,79 @@
+body {
+    background-image: url('../img/1.jpg');
+    /* background-position: center; */
+    background-size: cover;
+    -webkit-backface-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .8);
+    background-blend-mode: color;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.centered-row {
+    margin-top: 65px;
+    text-align: center;
+}
+
+.h1-header-pens {
+    font-family: 'Bree Serif', cursive;
+    color: whitesmoke;
+    font-size: 70px;
+}
+
+.display-nama-wrapper {
+    text-align: left;
+    color: whitesmoke;    
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+.display-nama-wrapper input {
+    padding: 20px;
+    font-size: 40px;
+    height: 100px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.tombol-wrapper {
+    margin-top: 75px;
+}
+
+.btn-acak {
+    padding: 10px;
+    width: 300px;    
+    line-height: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Bree Serif', cursive;
+    letter-spacing: 2px;
+}
+
+.gambar-wrapper img {
+    margin-right: 10px;
+}
+
+.gambar-wrapper {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    padding: 10px;
+    text-align: center;    
+    overflow: hidden;
+    margin: 0 auto;
+    width: 300px;
+}
+
+#logo-pens {
+    width: 90px;
+}
+
+#logo-dies {
+    width: 75px;
+}
