@@ -57,11 +57,23 @@
     <script src="src/js/bootstrap.min.js"></script>
     <script src="src/js/particles.min.js"></script>    
     <script src="src/peserta.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.0.9/dist/howler.min.js"></script>
     <script>
         var btn = document.getElementById("btn-acak");
         var input = document.getElementById("input-pemenang");        
 
         /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+
+        var sound = new Howl({
+            src: ['src/mp3/fx.mp3'],
+            loop: true
+        });
+
+        var congrats = new Howl({
+            src: ['src/mp3/congrats.mp3'],
+            loop: true
+        });
+
         particlesJS.load('particles-js', 'src/config.json', function() {
             console.log('callback - particles.js config loaded');
         });
@@ -134,20 +146,23 @@
 
             var stt = this.getAttribute('data-status-tombol');
             if( stt == 'start' ){
+                congrats.stop();
+                sound.play();
                 this.setAttribute('data-status-tombol', 'stop');
                 $('#btn-acak').removeClass("btn-warning");
                 $('#btn-acak').addClass("btn-danger");
-                $('#btn-acak').html("Stop [spasi]");
+                $('#btn-acak').html("Stop [spasi]");                
                 lup();
-            } else {                
+            } else {
+                congrats.play();
+                sound.stop();
                 status = 1;
                 i = 0;
                 rand = 0;                
                 this.setAttribute('data-status-tombol', 'start');
                 $('#btn-acak').removeClass("btn-danger");
                 $('#btn-acak').addClass("btn-success");
-                $('#btn-acak').html("Acak [spasi]");
-                
+                $('#btn-acak').html("Acak [spasi]");                                
                 setTimeout(function(){
                     status = 0;                    
                 }, 120);
