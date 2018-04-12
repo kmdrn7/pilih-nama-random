@@ -45,14 +45,15 @@ body {
 }
 
 .centered-row {
-    margin-top: 65px;
+    margin-top: 45px;
     text-align: center;
 }
 
 .h1-header-pens {
     font-family: 'Bree Serif', cursive;
     color: whitesmoke;
-    font-size: 70px;
+    font-size: 75px;
+    text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .display-nama-wrapper {
@@ -64,12 +65,14 @@ body {
 
 .display-nama-wrapper input {
     padding: 20px;
-    font-size: 50px;
-    height: 110px;
+    font-size: 75px;
+    height: 160px;
+    letter-spacing: 1.5px;
     margin-top: 40px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .tombol-wrapper {
@@ -80,10 +83,11 @@ body {
     padding: 10px;
     width: 300px;    
     line-height: 70px;
-    font-size: 30px;
+    font-size: 38px;
     font-weight: bold;
     font-family: 'Bree Serif', cursive;
     letter-spacing: 2px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .gambar-wrapper img {
@@ -95,6 +99,7 @@ body {
     border-radius: 5px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     padding: 10px;
     text-align: center;    
     overflow: hidden;
