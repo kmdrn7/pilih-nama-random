@@ -1145,5 +1145,119 @@ var peserta = [
     },{
         dep: 'Karyawan',
         name: 'Zakaria Akhmad Ubaidillah, A.Md.'
+    },{
+        dep: 'Karyawan',
+        name: 'Guskoro Pradipta Prana Arief'
+    },{
+        dep: 'Karyawan',
+        name: 'Hayyu Rachma Widya Aulya'
+    },{
+        dep: 'Karyawan',
+        name: 'Freedy Santoso'
+    },{
+        dep: 'Karyawan',
+        name: 'Rizky Dwi Lestari'
+    },{
+        dep: 'Karyawan',
+        name: 'Qurina Firdaus'
+    },{
+        dep: 'Karyawan',
+        name: 'Novaren Veraldo'
+    },{
+        dep: 'Karyawan',
+        name: 'Fahim Ulil Firdaus'
+    },{
+        dep: 'Karyawan',
+        name: 'Gevalinda Putri Deniswara'
+    },{
+        dep: 'Karyawan',
+        name: 'Fauziah Ikhrar Ayuni'
+    },{
+        dep: 'Karyawan',
+        name: 'Luthfiyah Nur Fadhila'
+    },{
+        dep: 'Karyawan',
+        name: 'Dufan Quraish Shihab'
+    },{
+        dep: 'Karyawan',
+        name: 'Ainia Alif Fatikhah'
+    },{
+        dep: 'Karyawan',
+        name: 'Eva Rahmadanti'
+    },{
+        dep: 'Karyawan',
+        name: 'Dio Dzaky'
+    },{
+        dep: 'Karyawan',
+        name: 'Shelly Oktia'
+    },{
+        dep: 'Karyawan',
+        name: 'Siti Nabilah'
+    },{
+        dep: 'Karyawan',
+        name: 'Irma Dwi Mulyanti'
+    },{
+        dep: 'Karyawan',
+        name: 'Ahsinu Wahyu UGA'
+    },{
+        dep: 'Karyawan',
+        name: 'Rizki Alfi Ramdhani'
+    },{
+        dep: 'Karyawan',
+        name: 'Andi Suprianto'
+    },{
+        dep: 'Karyawan',
+        name: 'Ersa Resita'
+    },{
+        dep: 'Karyawan',
+        name: 'Rachmad Syarul Hidayat'
+    },{
+        dep: 'Karyawan',
+        name: 'Binti Khoirunisa'
+    },{
+        dep: 'Karyawan',
+        name: 'Putri Riza Rokhmawati'
+    },{
+        dep: 'Karyawan',
+        name: 'Cyntya Rahma Dita'
+    },{
+        dep: 'Karyawan',
+        name: 'Rico Fajar Afandi'
+    },{
+        dep: 'Karyawan',
+        name: 'Muhammad Rizal Firmanda'
+    },{
+        dep: 'Karyawan',
+        name: 'Ashitak Marchi B.'
+    },{
+        dep: 'Karyawan',
+        name: 'Anisah Nabilah'
+    },{
+        dep: 'Karyawan',
+        name: 'Muslih Ridwan Fauzi'
+    },{
+        dep: 'Karyawan',
+        name: 'Khanun Roisatul Ummah'
+    },{
+        dep: 'Karyawan',
+        name: 'Aditya Krisnandi'
+    },{
+        dep: 'Karyawan',
+        name: 'Odelia Salsabila'
+    },{
+        dep: 'Karyawan',
+        name: 'Alivia Rahmawati'
+    },{
+        dep: 'Karyawan',
+        name: 'Efriza Luluk Savira'
+    },{
+        dep: 'Karyawan',
+        name: 'M. Ken Edo L.B.'
+    },{
+        dep: 'Karyawan',
+        name: 'Muhammad Fadli Pangestu'
+    },{
+        dep: 'Karyawan',
+        name: 'Dio Febrika Pangestu'
     },
 ];

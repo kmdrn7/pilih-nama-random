@@ -1,16 +1,32 @@
 body {
-    background-image: url('../img/1.jpg');
+    background-image: url('../img/1.jpg');    
     /* background-position: center; */
     background-size: cover;
     -webkit-backface-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: rgba(0, 0, 0, .85);
+    background-color: rgba(0, 0, 0, 0.85);
     background-blend-mode: color;
     height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+.container-fluid {
+    overflow: hidden;
+}
+
+.bg-container {
+    float: left;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    background-color: rgba(244, 216, 62, 0.01);        
+    background-image: url('../img/2.png');    
+    background-repeat: repeat;    
+    background-blend-mode: color;    
+    z-index: -999;
 }
 
 .centered-row {
