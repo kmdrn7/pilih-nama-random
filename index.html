@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/css/animate.css" rel="stylesheet">
     <link href="src/css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
 
@@ -20,12 +21,8 @@
     <![endif]-->    
 </head>
 <body>    
-    <div id="particles-js" style="
-        float: left;
-        width: 100%;
-        height:  98vh;
-        position:  absolute;
-    "></div>
+    <div id="particles-js" style="float: left; width: 100%; height:  98vh; position:  absolute;">        
+    </div>
     <div class="container-fluid">        
         <div class="row">
             <div class="gambar-wrapper">
@@ -40,7 +37,7 @@
                     <input type="text" name="pemenang" id="input-pemenang" class="form-control" value="-" readonly>
                 </div>
                 <div class="tombol-wrapper">                    
-                    <button type="button" data-status-tombol="start" class="btn btn-warning btn-lg btn-acak" id="btn-acak">Acak</button>
+                    <button type="button" data-status-tombol="start" class="btn btn-success btn-lg btn-acak" id="btn-acak">Acak [spasi]</button>
                 </div>
             </div>
         </div>
@@ -51,7 +48,7 @@
     <script src="src/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="src/js/bootstrap.min.js"></script>
-    <script src="src/js/particles.min.js"></script>
+    <script src="src/js/particles.min.js"></script>    
     <script src="src/peserta.js"></script>
     <script>
         var btn = document.getElementById("btn-acak");
@@ -89,7 +86,9 @@
                         input.value = "Peserta tidak ada";
                     }                    
                 } else {
+                    $('#input-pemenang').animateCss('zoomInDown');
                     var nama = app.peserta[rand].name;
+                    $('#input-pemenang').addClass('')
                     app.peserta.splice(rand, 1);
                     input.value = nama;
                     console.log(rand+' '+nama+ " dihapus dari peserta karena sudah pernah mendapat hadian");
@@ -98,17 +97,49 @@
             }, 100);
         }
 
+        $.fn.extend({
+            animateCss: function(animationName, callback) {
+                var animationEnd = (function(el) {
+                    var animations = {
+                        animation: 'animationend',
+                        OAnimation: 'oAnimationEnd',
+                        MozAnimation: 'mozAnimationEnd',
+                        WebkitAnimation: 'webkitAnimationEnd',
+                    };
+
+                    for (var t in animations) {
+                        if (el.style[t] !== undefined) {
+                        return animations[t];
+                        }
+                    }
+                })(document.createElement('div'));
+
+                this.addClass('animated ' + animationName).one(animationEnd, function() {
+                    $(this).removeClass('animated ' + animationName); 
+                    if (typeof callback === 'function') callback();
+                });
+
+                return this;
+            },
+        });
+
         btn.addEventListener('click', function (evt) {
 
             var stt = this.getAttribute('data-status-tombol');
             if( stt == 'start' ){
                 this.setAttribute('data-status-tombol', 'stop');
+                $('#btn-acak').removeClass("btn-warning");
+                $('#btn-acak').addClass("btn-danger");
+                $('#btn-acak').html("Stop [spasi]");
                 lup();
             } else {                
                 status = 1;
                 i = 0;
                 rand = 0;                
                 this.setAttribute('data-status-tombol', 'start');
+                $('#btn-acak').removeClass("btn-danger");
+                $('#btn-acak').addClass("btn-success");
+                $('#btn-acak').html("Acak [spasi]");
                 
                 setTimeout(function(){
                     status = 0;                    
